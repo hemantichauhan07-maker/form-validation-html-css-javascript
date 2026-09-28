@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!--custom css-->
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!--icone-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c3e50;">
+        <div class="container">
+            <a href="#" class="navbar-brand fw-bold">MyForm</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-danger ms-2">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!--main section-->
+    <div class="container-custom">
+        <!--left-side-->
+        <div class="left-side">
+            <h1 style="border-radius: 5px; padding: 3px; text-align: end;">Form Validation</h1>
+            <img src="./images/1.png" alt="Form Validation" style="width: 100%; border-radius: 10px;">
+            <p>Start for free & get<br>Attractive Offers Today!</p>
+        </div>
+        <!--right-side-->
+        <div class="right-side">
+            <div class="alert alert-success alert-dismissible custom-alert fade" role="alert" id="successAlert">
+                <i class="fa-solid fa-circle-check me-2"></i>
+                <strong>Success!</strong>Your form hs been submiteed!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+            </div>
+            <form id="signupForm">
+                <div class="mb-3">
+                    <input type="text" id="name" class="form-control" placeholder="Enter Name..">
+                    <div class="text-danger mt-1" id="nameError"></div>
+                </div>
+                <div class="mb-3">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email..">
+                    <div class="text-danger mt-1" id="emailError"></div>
+                </div>
+
+
+                <div class="mb-3">
+                    <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Mobile Number">
+                    <div class="text-danger mt-1" id="mobileError"></div>
+                </div>
+
+
+                <div class="mb-3 position-relative">
+                    <input type="password" name="password" id="password" class="form-control"
+                        placeholder="Enter Password">
+
+                    <i class="bi bi-eye-fill position-absolute top-50 end-0 translate-middle-y me-3"
+                        id="togglePassword"></i>
+                    <div class="text-danger mt-1" id="passwordError"></div>
+                </div>
+
+                <ul class="password-requirements">
+
+                    <li id="req-length" class="text-danger">
+                        Minimum 8 Character
+                    </li>
+
+                    <li id="req-lower" class="text-danger">
+                        LowerCase
+                    </li>
+
+                    <li id="req-upper" class="text-danger">
+                        UpperCase
+                    </li>
+
+                    <li id="req-number" class="text-danger">
+                        Number
+                    </li>
+
+                    <li id="req-special" class="text-danger">
+                        Special Character (@ ! $ % >)
+                    </li>
+
+                </ul>
+                <div class="mb-3 position-relative">
+
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"
+                        class="form-control">
+
+                    <i class="bi bi-eye-fill  position-absolute top-50 end-0 translate-middle-y me-3"
+                        id="toggleConfirm"></i>
+                </div>
+                <div class="text-danger mt-1" id="confirmError"> </div>
+                <button class="btn w-100 mt-2" type="submit"
+                    style="color: #f8f9fa; background-color: #2c3e50;">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!--footer-->
+
+    <footer class="text-white mt-5" style="background-color: #2c3e50">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="fw-bold">MyForm</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="text-white me-3">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+
+                    <a href="#" class="text-white me-3">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+
+                    <a href="#" class="text-white me-3">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <hr class="border-light">
+            <p class="text-center mb-0">&copy; 2025 MyForm.All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
